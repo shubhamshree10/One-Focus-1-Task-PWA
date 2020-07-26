@@ -20,20 +20,27 @@
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaauth@latest/dist/pwa-auth.min.js"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background: linear-gradient(-102deg, rgb(206,68,255) 0%, #44cfd9 100%);background-color: rgb(255,255,255);font-family: 'Allerta Stencil', sans-serif;">
-        <div class="container"><a class="navbar-brand logo" href="#" style="font-family: 'Allerta Stencil', sans-serif;margin: 0px;"><img src="assets/img/targetNoBG192.png" style="width: 38px;">&nbsp;Focus On 1</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+        style="background: linear-gradient(-102deg, rgb(206,68,255) 0%, #44cfd9 100%);background-color: rgb(255,255,255);font-family: 'Allerta Stencil', sans-serif;">
+        <div class="container"><a class="navbar-brand logo" href="#"
+                style="font-family: 'Allerta Stencil', sans-serif;margin: 0px;"><img src="assets/img/targetNoBG192.png"
+                    style="width: 38px;">&nbsp;Focus On 1</a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="login.html">Login</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page login-page">
@@ -41,14 +48,21 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Log In</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <pwa-auth microsoftkey="..." googlekey="..." facebookkey="..." applekey="...">
+                    </pwa-auth>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in,
+                        mattis vitae leo.</p>
                 </div>
                 <form>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" id="password"></div>
+                    <div class="form-group"><label for="email">Email</label><input class="form-control item"
+                            type="email" id="email"></div>
+                    <div class="form-group"><label for="password">Password</label><input class="form-control"
+                            type="password" id="password"></div>
                     <div class="form-group">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
-                    </div><button class="btn btn-primary btn-block" type="submit">Log In</button></form>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label
+                                class="form-check-label" for="checkbox">Remember me</label></div>
+                    </div><button class="btn btn-primary btn-block" type="submit">Log In</button>
+                </form>
             </div>
         </section>
     </main>
