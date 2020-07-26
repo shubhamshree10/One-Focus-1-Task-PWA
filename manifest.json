@@ -1,0 +1,26 @@
+{
+    "short_name": "One Focus",
+    "name": "Focus On 1",
+    "icons": [
+        {
+            "src": "/assets/img/targetNoBG192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/img/targetNoBG512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/assets/img/NoBG196.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+    ],
+    "start_url": "/",
+    "background_color": "rgb(124,199,241)",
+    "theme_color": "rgb(90,245,199)",
+    "display": "fullscreen"
+}

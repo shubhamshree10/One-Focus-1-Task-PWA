@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "onefocus",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
