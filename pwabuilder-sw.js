@@ -1,11 +1,11 @@
 // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-if( 'function' === typeof importScripts) {
+if ('function' === typeof importScripts) {
   importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
   addEventListener('message', onMessage);
 
-  function onMessage(e) { 
+  function onMessage(e) {
     // do some work here 
-  }    
+  }
 }
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
