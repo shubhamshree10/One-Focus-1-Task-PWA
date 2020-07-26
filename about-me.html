@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>About Us - Brand</title>
+    <title>About Me</title>
     <meta name="theme-color" content="rgb(90,245,199)">
+    <link rel="canonical" href="https://onefocus1task.web.app/login.html" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/target16NoBG.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/target32NoBG.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/targetNoBG192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/targetNoBG192.png">
+    <link rel="apple-touch-icon" href="assets/img/target192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/targetNoBG512.png">
+    <script src="pwabuilder-sw.js"></script>
+    <script type="module" src="pwabuilder-sw-register.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
@@ -20,6 +23,7 @@
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaauth@latest/dist/pwa-auth.min.js"></script>
 </head>
 
 <body>
@@ -115,8 +119,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/pwabuilder-sw-register.js"></script>
-    <script src="assets/js/pwabuilder-sw.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./pwabuilder-sw.js");
+        }
+    </script>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
 </body>
 
 </html>
