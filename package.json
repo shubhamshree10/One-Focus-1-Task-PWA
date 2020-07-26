@@ -1,0 +1,11 @@
+{
+  "name": "1-focus-1-task",
+  "version": "1.0.0",
+  "description": "This is a progressive Web app that helps you in focusing and doing just one task, the one that's important right now",
+  "main": "pwabuilder-sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham Shree",
+  "license": "ISC"
+}
