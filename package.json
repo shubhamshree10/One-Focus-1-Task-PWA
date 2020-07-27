@@ -10,5 +10,19 @@
   "license": "ISC",
   "devDependencies": {
     "webpack-merge": "^5.0.9"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamshree10/One-Focus-1-Task-PWA.git"
+  },
+  "keywords": [
+    "focus",
+    "concentration",
+    "productivity"
+  ],
+  "bugs": {
+    "url": "https://github.com/shubhamshree10/One-Focus-1-Task-PWA/issues"
+  },
+  "homepage": "https://github.com/shubhamshree10/One-Focus-1-Task-PWA#readme"
 }
