@@ -28,44 +28,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaauth@latest/dist/pwa-auth.min.js"></script>
-    <script src="/__/firebase/init.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 
 <body>
 
     <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '{2463169880640837}',
-            cookie     : true,
-            xfbml      : true,
-            version    : '{v7.0}'
-          });
-            
-          FB.AppEvents.logPageView();   
-            
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '{2463169880640837}',
+                cookie: true,
+                xfbml: true,
+                version: '{v7.0}'
+            });
+
+            FB.AppEvents.logPageView();
+
         };
-      
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "https://connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
 
-FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
-      </script>
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+    </script>
 
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
         style="background: linear-gradient(-102deg, rgb(206,68,255) 0%, #44cfd9 100%);background-color: rgb(255,255,255);font-family: 'Allerta Stencil', sans-serif;">
@@ -90,11 +88,9 @@ function checkLoginState() {
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Log In</h2>
-                    
-<fb:login-button 
-scope="public_profile,email"
-onlogin="checkLoginState();">
-</fb:login-button>
+
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">FB login
+                    </fb:login-button>
                     <pwa-auth appearance="list" microsoftkey="..." googlekey="..." facebookkey="..." applekey="...">
                     </pwa-auth>
 
@@ -103,7 +99,7 @@ onlogin="checkLoginState();">
                     <h1>Welcome to My Awesome App</h1>
                     <div id="firebaseui-auth-container"></div>
                     <div id="loader">Loading...</div>
-                    
+
                 </div>
                 <form>
                     <div class="form-group"><label for="email">Email</label><input class="form-control item"
@@ -174,7 +170,8 @@ onlogin="checkLoginState();">
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
-
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("./pwabuilder-sw.js");
