@@ -1,6 +1,6 @@
 {
   "name": "1-focus-1-task",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a progressive Web app that helps you in focusing and doing just one task, the one that's important right now",
   "main": "pwabuilder-sw.js",
   "scripts": {
