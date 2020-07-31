@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head> 
-        <title>Branched project</title>
-    </head>
-    <body>
-        <p>Hi Welcome to branch!</p>
-    </body>
+
+<head>
+    <title>Branched project</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/target16NoBG.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/target32NoBG.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/targetNoBG192.png">
+    <link rel="apple-touch-icon" href="assets/img/target192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/targetNoBG512.png">
+    <script src="pwabuilder-sw.js"></script>
+    <script type="module" src="pwabuilder-sw-register.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./pwabuilder-sw.js");
+        }
+    </script>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
+</head>
+
+<body>
+    <p>Hi Welcome to branch!</p>
+</body>
+
 </html>
